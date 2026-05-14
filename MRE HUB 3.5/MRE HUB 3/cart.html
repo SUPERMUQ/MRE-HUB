@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart | MRE HUB</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    /* Additional styles to keep footer at bottom */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    main {
+      flex: 1;
+    }
+    
+    .cart-container {
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .empty-cart-message {
+      text-align: center;
+      padding: 2rem;
+      margin: auto;
+    }
+    
+    /* Style for clickable product elements */
+    .product-image-link {
+      display: block;
+      cursor: pointer;
+    }
+    
+    .product-name-link {
+      color: #0066cc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .product-name-link:hover {
+      color: #00c896;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+<header>
+  <div class="container header-container">
+    <a href="index.html" class="logo-link">
+      <img src="images/MRE HUB Logo (1).png" alt="MRE HUB" class="header-logo">
+    </a>
+    
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="auth-links">
+      <a href="signin.html" class="button small">Sign In</a>
+      <a href="register.html" class="button small outline">Register</a>
+      <a href="cart.html" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <section class="container cart-container">
+      <h2 style="text-align: center;">Your Shopping Cart</h2>
+      <div id="cart-items" class="product-grid"></div>
+      <div id="cart-total" style="text-align:center; margin-top:20px;"></div>
+      <div id="checkout-btn" style="text-align:center; margin-top:20px;"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>MRE HUB</h3>
+          <p>Providing high-quality Meal Ready-to-Eat options from around the world.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@mrehub.com</p>
+          <p>Phone: +60172725235</p>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2025 MRE HUB All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+  <script>
+    // Show scroll to top button
+    const topBtn = document.querySelector('.back-to-top');
+    window.onscroll = function () {
+      topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+    };
+
+    // Smooth scroll to top
+    topBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Function to update cart count in header
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const cartCount = document.querySelector('.cart-count');
+      if (cartCount) cartCount.textContent = totalItems;
+    }
+
+  function loadCart() {
+    const cartContainer = document.getElementById('cart-items');
+    const totalContainer = document.getElementById('cart-total');
+    const checkoutBtn = document.getElementById('checkout-btn');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cartContainer.innerHTML = '';
+    checkoutBtn.innerHTML = '';
+    let totalItems = 0;
+    let totalPrice = 0;
+
+    if (cart.length === 0) {
+      cartContainer.innerHTML = '<div class="empty-cart-message"><p>Your cart is empty.</p><a href="products.html" class="button">Continue Shopping</a></div>';
+      totalContainer.innerHTML = '';
+      // Update cart count when cart is empty
+      updateCartCount();
+      return;
+    }
+
+    cart.forEach((item, index) => {
+      totalItems += item.quantity;
+      totalPrice += item.price * item.quantity;
+
+      cartContainer.innerHTML += `
+        <div class="product-card" style="max-width: 320px; margin: 0 auto;">
+          <a href="product-detail.html?id=${item.id}" class="product-image-link">
+            <img src="${item.image}" alt="${item.name}" style="height: 200px; object-fit: cover;">
+          </a>
+          <a href="product-detail.html?id=${item.id}" class="product-name-link">
+            <h2 style="font-size: 1.rem; margin: 10px 0;">${item.name}</h2>
+          </a>
+          <p style="margin: 5px 0; color: #000000; font-size: 1rem;"><strong>Quantity:</strong> ${item.quantity}</p>
+          <p style="margin: 5px 0; color: #000000; font-size: 1rem;"><strong>Price:</strong> RM ${(item.price * item.quantity).toFixed(2)}</p>
+          <div style="display:flex; gap:10px; justify-content:center; margin-top: 15px;">
+            <button onclick="decreaseQuantity(${index})" class="button small">-</button>
+            <button onclick="increaseQuantity(${index})" class="button small">+</button>
+            <button onclick="removeItem(${index})" class="button small outline">Remove All</button>
+          </div>
+        </div>
+      `;
+    });
+
+    totalContainer.innerHTML = `
+      <h2>Total Items: ${totalItems}</h2>
+      <h2>Total Price: RM ${totalPrice.toFixed(2)}</h2>
+    `;
+
+    checkoutBtn.innerHTML = `
+      <a href="checkout.html" class="button">Proceed to Checkout</a>
+    `;
+
+    // Update cart count after loading cart
+    updateCartCount();
+  }
+
+    function decreaseQuantity(index) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      if (cart[index].quantity > 1) {
+        cart[index].quantity -= 1;
+      } else {
+        cart.splice(index, 1);
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      loadCart();
+    }
+
+    function increaseQuantity(index) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart[index].quantity += 1;
+      localStorage.setItem('cart', JSON.stringify(cart));
+      loadCart();
+    }
+
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      loadCart();
+    }
+
+    // Initialize cart on page load
+    loadCart();
+    updateCartCount();
+  </script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

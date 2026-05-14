@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MRE HUB</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="container header-container">
+    <a href="index.html" class="logo-link">
+      <img src="images/MRE HUB Logo (1).png" alt="MRE HUB" class="header-logo">
+    </a>
+    
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="auth-links">
+      <a href="signin.html" class="button small">Sign In</a>
+      <a href="register.html" class="button small outline">Register</a>
+      <a href="cart.html" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="contact-hero" style="background: linear-gradient rgba(0, 0, 0, 0.7), url('images/contact-hero.jpg'); background-size: cover; background-position: center; padding: 6rem 0; color: white; text-align: center;">
+    <div class="container">
+      <h1 style="font-size: 2.8rem; margin-bottom: 1rem; font-weight: 700;">Get In Touch</h1>
+      <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">We're here to help with any questions about our products, orders, or partnerships.</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="contact-content" style="padding: 4rem 0;">
+    <div class="container">
+      <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 4rem;">
+        <!-- Contact Information -->
+        <div class="contact-info" style="background: #f9f9f9; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+          <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #0066cc;">Contact Information</h2>
+          
+          <div class="info-item" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
+            <div class="info-icon" style="width: 50px; height: 50px; background-color: #00c896; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.25rem;">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-text">
+              <h3 style="margin-bottom: 0.5rem; color: #333;">Address</h3>
+              <p>Tower 6, Avenue 5, 8, Jalan Kerinchi,<br>
+              Bangsar South, 59200 Kuala Lumpur,<br>
+              W.P. Kuala Lumpur, Malaysia</p>
+            </div>
+          </div>
+          
+          <div class="info-item" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
+            <div class="info-icon" style="width: 50px; height: 50px; background-color: #00c896; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.25rem;">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="info-text">
+              <h3 style="margin-bottom: 0.5rem; color: #333;">Phone</h3>
+              <p>+603-9876 5432</p>
+            </div>
+          </div>
+          
+          <div class="info-item" style="display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start;">
+            <div class="info-icon" style="width: 50px; height: 50px; background-color: #00c896; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.25rem;">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-text">
+              <h3 style="margin-bottom: 0.5rem; color: #333;">Email</h3>
+              <p>support@mrehub.com</p>
+            </div>
+          </div>
+          
+          <div class="info-item" style="display: flex; gap: 1.5rem; margin-bottom: 0; align-items: flex-start;">
+            <div class="info-icon" style="width: 50px; height: 50px; background-color: #00c896; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.25rem;">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="info-text">
+              <h3 style="margin-bottom: 0.5rem; color: #333;">Operating Hours</h3>
+              <p>Daily: 9:00 AM - 9:00 PM<br>Closed on Public Holidays</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+          <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: #0066cc;">Send Us a Message</h2>
+          <form id="contactForm">
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Your Name</label>
+              <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-family: 'Poppins', sans-serif;">
+            </div>
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email Address</label>
+              <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-family: 'Poppins', sans-serif;">
+            </div>
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Subject</label>
+              <input type="text" id="subject" name="subject" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-family: 'Poppins', sans-serif;">
+            </div>
+            <div class="form-group" style="margin-bottom: 2rem;">
+              <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
+              <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-family: 'Poppins', sans-serif; resize: vertical;"></textarea>
+            </div>
+            <button type="submit" class="button" style="width: 100%; padding: 15px; font-size: 1rem; background-color: #0066cc; color: white; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s;">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map-container" style="height: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.935099355906!2d101.66543407473013!3d3.111874196863674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4a29c1d5a373%3A0x701c2f2543dedc42!2sTouch%20&#39;n%20Go%20Sdn%20Bhd!5e0!3m2!1sms!2smy!4v1755359280414!5m2!1sms!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" style="background-color: #f9f9f9; padding: 4rem 0;">
+    <div class="container">
+      <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #0066cc;">Frequently Asked Questions</h2>
+      <div class="faq-grid" style="max-width: 800px; margin: 0 auto;">
+        <div class="faq-item" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 1rem;">
+          <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background-color: white; border: none; font-size: 1rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+            How do I order MREs?
+            <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
+          </button>
+          <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+            <p style="padding-bottom: 1.5rem;">Select your desired meals, add to cart, and proceed to checkout. We'll handle the rest!</p>
+          </div>
+        </div>
+        
+        <div class="faq-item" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 1rem;">
+          <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background-color: white; border: none; font-size: 1rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+            Where do you deliver?
+            <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
+          </button>
+          <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+            <p style="padding-bottom: 1.5rem;">We deliver nationwide across Malaysia. International delivery is coming soon!</p>
+          </div>
+        </div>
+        
+        <div class="faq-item" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 1rem;">
+          <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background-color: white; border: none; font-size: 1rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+            Can I return my order?
+            <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
+          </button>
+          <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+            <p style="padding-bottom: 1.5rem;">Yes, returns are accepted within 7 days if the product is unopened and in original condition.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+          <button class="faq-question" style="width: 100%; padding: 1.5rem; text-align: left; background-color: white; border: none; font-size: 1rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+            Do you offer bulk purchases?
+            <i class="fas fa-chevron-down" style="transition: transform 0.3s ease;"></i>
+          </button>
+          <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+            <p style="padding-bottom: 1.5rem;">Yes, please email us at sales@mrehub.com for bulk pricing and custom orders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>MRE HUB</h3>
+          <p>Providing high-quality Meal Ready-to-Eat options from around the world.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@mrehub.com</p>
+          <p>Phone: +60172725235</p>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2025 MRE HUB All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+  
+  <div id="popup-notification" class="popup-notification">
+    <i class="fas fa-check-circle"></i>
+    <span class="notification-message"></span>
+  </div>
+
+  <script>
+
+        // Show scroll to top button
+    const topBtn = document.querySelector('.back-to-top');
+    window.onscroll = function () {
+      topBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+    };
+
+    // Smooth scroll to top
+    topBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Update cart count
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const cartCount = document.querySelector('.cart-count');
+      if (cartCount) cartCount.textContent = totalItems;
+    }
+
+    // FAQ Accordion functionality
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const faqItem = button.closest('.faq-item');
+        const answer = faqItem.querySelector('.faq-answer');
+        const icon = button.querySelector('i');
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-item').forEach(item => {
+          if (item !== faqItem) {
+            item.querySelector('.faq-answer').style.maxHeight = '0';
+            item.querySelector('i').style.transform = 'rotate(0deg)';
+          }
+        });
+
+        // Toggle current FAQ
+        if (answer.style.maxHeight) {
+          answer.style.maxHeight = null;
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // Contact form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      // Here you would typically send the data to a server
+      console.log('Form submitted:', { name, email, subject, message });
+      
+      // Show success message
+      const popup = document.getElementById('popup-notification');
+      const messageEl = popup.querySelector('.notification-message');
+      messageEl.textContent = "Message sent successfully!";
+      popup.classList.add('show');
+
+      // Reset form
+      this.reset();
+      
+      // Hide notification after 3 seconds
+      setTimeout(() => {
+        popup.classList.remove('show');
+      }, 3000);
+    });
+
+
+    // Initialize cart count
+    updateCartCount();
+  </script><script src="js/auth.js"></script>
+</body>
+</html>

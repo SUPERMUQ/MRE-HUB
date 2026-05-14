@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account | MRE HUB</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="images/MRE HUB Logo (1).png" alt="MRE HUB" class="header-logo">
+      </a>
+      
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="auth-links">
+        <!-- Auth links will be populated by JavaScript -->
+      </div>
+    </div>
+  </header>
+  
+  <main class="container">
+    <h2 style="text-align: center; margin-bottom: 30px;">My Account</h2>
+    
+    <div class="account-grid">
+      <!-- User Info Section (Left) -->
+      <div class="account-info-box">
+        <h3><i class="fas fa-user-circle"></i> Account Information</h3>
+        <div id="user-info">
+          <div class="account-loading">
+            <p>Loading account information...</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Order History Section (Right) -->
+      <div class="order-history-box">
+        <h3><i class="fas fa-history"></i> Order History</h3>
+        <div id="order-history">
+          <div class="account-loading">
+            <p>Loading order history...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>MRE HUB</h3>
+          <p>Providing high-quality Meal Ready-to-Eat options from around the world.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: info@mrehub.com</p>
+          <p>Phone: +60172725235</p>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2025 MRE HUB All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
