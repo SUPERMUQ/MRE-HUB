@@ -30,6 +30,11 @@
         <span class="cart-count">0</span>
       </a>
     </div>
+
+    <button class="hamburger" id="hamburger-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+    
   </div>
 </header>
 
@@ -273,6 +278,19 @@
   });
 
   updateCartCount();
-  </script><script src="js/auth.js"></script>
+  </script>
+  
+  <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const headerNav = document.querySelector('.header-nav');
+    const authLinks = document.querySelector('.auth-links');
+
+    hamburgerBtn.addEventListener('click', () => {
+      headerNav.classList.toggle('active');
+      authLinks.classList.toggle('active');
+    });
+  </script>
+
+  <script src="js/auth.js"></script>
 </body>
 </html>

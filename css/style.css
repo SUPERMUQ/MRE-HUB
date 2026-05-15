@@ -28,7 +28,6 @@ a {
 }
 
 /* Header */
-
 header h1 {
   color: #fbc80b;
   font-size: 2rem;
@@ -46,7 +45,6 @@ header nav a {
 header nav a:hover {
   color: #00c896;
 }
-
 
 .button {
   display: inline-block;
@@ -169,8 +167,6 @@ header nav a:hover {
   transition: width 0.5s ease;
 }
 
-
-
 /* Product Grid */
 .product-grid {
   display: grid;
@@ -271,6 +267,7 @@ body {
     transform: translateY(0);
   }
 }
+
 /* Back to Top Button */
 .back-to-top {
   position: fixed;
@@ -305,29 +302,13 @@ body {
     transform: translateY(0);
   }
 }
+
 /* Responsive Navigation */
 header nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-}
-@media (max-width: 600px) {
-  header nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  header h1 {
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .button {
-    font-size: 0.95rem;
-    padding: 10px 20px;
-  }
 }
 
 .hero-bg {
@@ -359,6 +340,7 @@ header nav {
   z-index: 2;
   padding: 0 20px;
 }
+
 .button.small {
   font-size: 0.85rem;
   padding: 6px 12px;
@@ -376,6 +358,7 @@ header nav {
   color: white;
   border-color: #333;
 }
+
 .form-box {
   max-width: 400px;
   margin: auto;
@@ -422,15 +405,12 @@ form button:hover {
   background-color: #005fa3;
 }
 
-
-
 /* ✅ Top Pop-up notification styling */
-/* Updated Popup Notification - Positioned relative to header */
 .popup-notification {
   position: absolute;
-  top: 50%; /* Center vertically within header */
-  right: 30px; /* Position from the right edge */
-  transform: translateY(-50%) translateX(20px); /* Adjust for smooth animation */
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%) translateX(20px);
   background-color: #28a745;
   color: white;
   padding: 8px 16px;
@@ -487,14 +467,11 @@ form button:hover {
   font-size: 14px;
 }
 
-
 .product-price {
   font-weight: bold;
   color: #000000;
   font-size: 1rem;
 }
-
-
 
 /* Contact Page Styles */
 .contact-hero {
@@ -508,8 +485,6 @@ form button:hover {
     position: relative;
     overflow: hidden;
 }
-
-
 
 .contact-hero .container {
     position: relative;
@@ -531,22 +506,6 @@ form button:hover {
     margin-left: auto;
     margin-right: auto;
     text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .contact-hero {
-        padding: 6rem 0;
-        background-attachment: scroll;
-    }
-    
-    .contact-hero h1 {
-        font-size: 2rem;
-    }
-    
-    .contact-hero p {
-        font-size: 1rem;
-    }
 }
 
 .contact-content {
@@ -602,8 +561,6 @@ form button:hover {
     margin-bottom: 1.5rem;
     color: var(--primary-dark);
 }
-
-
 
 .map-container {
     height: 400px;
@@ -894,30 +851,6 @@ form button:hover {
   50% { transform: translateY(-5px); }
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .product-detail-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .product-image {
-    height: 300px;
-  }
-  
-  .product-info h1 {
-    font-size: 1.8rem;
-  }
-  
-  .product-meta {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .price {
-    font-size: 1.5rem;
-  }
-}
-
 /* Flip Product Cards */
 .page-title {
   text-align: center;
@@ -1047,31 +980,6 @@ form button:hover {
   text-decoration: underline;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .flip-product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  }
-  
-  .flip-card {
-    height: 320px;
-  }
-}
-
-@media (max-width: 480px) {
-  .flip-product-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-
-
-
-
-
-
 .checkout-total {
   font-weight: bold;
   font-size: 1.2rem;
@@ -1079,9 +987,6 @@ form button:hover {
   text-align: right;
   border-top: 2px solid #00c896;
 }
-
-
-
 
 /* Checkout Page Styles */
 .checkout-container {
@@ -1245,12 +1150,10 @@ form button:hover {
   display: block;
 }
 
-
 .bank-option img {
   height: 30px;
   object-fit: contain;
 }
-
 
 .ewallet-option img {
   height: 30px;
@@ -1298,8 +1201,6 @@ form button:hover {
 .order-summary h3 i {
   color: #00c896;
 }
-
-
 
 .checkout-item:not(:last-child) {
   border-bottom: 1px solid #f5f5f5;
@@ -1364,24 +1265,6 @@ form button:hover {
   text-decoration: underline;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .checkout-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-  
-  .bank-list,
-  .ewallet-options {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
 /* Expiration date styling */
 .product-meta .expires,
 .product-card .expires {
@@ -1402,86 +1285,26 @@ form button:hover {
   font-size: 0.85em;
 }
 
-/* Product card expiration styling */
 .product-card .expires {
   font-size: 0.8em;
   margin-top: 5px;
   color: #6c757d;
 }
 
-
-
-
-
-
-
-
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-  header nav a {
-    margin-right: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    padding: 0.5rem 0;
-  }
-  
-  header h1 {
-    font-size: 1.5rem;
-  }
-  
-  header nav a {
-    margin-right: 10px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 576px) {
-  header h1 {
-    font-size: 1.3rem;
-  }
-  
-  .auth-links {
-    gap: 8px;
-  }
-  
-  .button.small {
-    padding: 4px 8px;
-    font-size: 0.8rem;
-  }
-}
-
-
 .header-logo:hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
 
-
-@media (max-width: 768px) {
-  .header-logo {
-    height: 50px; /* Slightly smaller on mobile */
-  }
-}
-
-@media (max-width: 480px) {
-  .header-logo {
-    height: 40px;
-  }
-}
 .logo-link {
   display: inline-block;
-  padding: 5px 0; /* Gives some vertical spacing */
+  padding: 5px 0;
   transition: transform 0.3s ease;
 }
 
 .logo-link:hover {
   transform: scale(1.05);
 }
-
 
 /* Testimonials Section */
 .testimonials {
@@ -1530,12 +1353,6 @@ form button:hover {
   width: 100%;
 }
 
-.rating {
-  color: #FFD700;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
 .testimonial-text {
   font-style: italic;
   color: #555;
@@ -1558,23 +1375,6 @@ form button:hover {
   font-size: 0.9rem;
   margin: 0.2rem 0 0 0;
 }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .testimonial-card {
-    padding: 1.5rem 1rem;
-  }
-  
-  .customer-avatar {
-    width: 70px;
-    height: 70px;
-  }
-}
-
 
 /* Advantages Section */
 .advantages {
@@ -1643,23 +1443,6 @@ form button:hover {
   line-height: 1.6;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .advantages-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .advantage-card {
-    padding: 1.5rem;
-  }
-  
-  .advantage-icon {
-    width: 70px;
-    height: 70px;
-    font-size: 1.5rem;
-  }
-}
-
 /* Header Container */
 .header-container {
   display: flex;
@@ -1669,20 +1452,18 @@ form button:hover {
   padding: 0 20px;
 }
 
-/* Logo styling */
 .logo-link {
-  margin-right: auto; /* Ini akan mendorong logo ke kiri */
+  margin-right: auto;
   display: flex;
   align-items: center;
 }
 
 .header-logo {
-  height: 300px; /* Ukuran logo besar */
+  height: 300px;
   width: auto;
   transition: all 0.3s ease;
 }
 
-/* Navigation styling - tetap di tengah */
 .header-nav {
   position: absolute;
   left: 50%;
@@ -1692,16 +1473,12 @@ form button:hover {
   align-items: center;
 }
 
-/* Auth links styling - tetap di kanan */
 .auth-links {
   display: flex;
   gap: 10px;
   align-items: center;
   margin-left: auto;
 }
-
-
-
 
 /* Header Styles */
 header {
@@ -1714,18 +1491,6 @@ header {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
-
-
-
-/* Logo Styles */
-.logo-link {
-  display: flex;
-  align-items: center;
-}
-
-
-
-
 
 .header-nav a {
   position: relative;
@@ -1788,59 +1553,12 @@ header {
   text-align: center;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    padding: 1rem;
-  }
-  
-  .header-nav {
-    margin: 1rem 0;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .auth-links {
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-logo {
-    height: 40px;
-  }
-  
-  .header-nav {
-    gap: 10px;
-  }
-  
-  .header-nav a {
-    font-size: 0.9rem;
-  }
-  
-  .button.small {
-    padding: 6px 12px;
-    font-size: 0.8rem;
-  }
-}
-
-
-/* Add to your existing style.css */
-
 .order-section {
   background: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.checkout-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin: 20px 0;
 }
 
 .checkout-item {
@@ -1858,20 +1576,6 @@ header {
   height: 80px;
   object-fit: cover;
   border-radius: 4px;
-}
-
-.item-details {
-  flex: 1;
-}
-
-.item-details h4 {
-  margin: 0 0 5px 0;
-  color: #333;
-}
-
-.item-total {
-  font-weight: bold;
-  color: #0066cc;
 }
 
 .order-totals {
@@ -2046,26 +1750,7 @@ header {
   text-decoration: underline;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .account-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .account-info-box,
-  .order-history-box {
-    padding: 1.5rem;
-  }
-  
-  .order-meta {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-
 /* Cart Page Specific Styles */
-
-
 #cart-items .product-card {
   width: 100%;
   max-width: 300px;
@@ -2106,26 +1791,13 @@ header {
 
 #cart-items {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping to multiple lines */
+  flex-wrap: wrap; 
   gap: 20px;
   padding: 20px 0;
 }
 
 #cart-items .product-card {
-  flex: 0 0 calc(33.33% - 20px); /* 3 items per row accounting for gap */
-  /* Rest of the styles remain the same */
-}
-
-@media (max-width: 900px) {
-  #cart-items .product-card {
-    flex: 0 0 calc(50% - 20px); /* 2 items per row on medium screens */
-  }
-}
-
-@media (max-width: 600px) {
-  #cart-items .product-card {
-    flex: 0 0 100%; /* 1 item per row on mobile */
-  }
+  flex: 0 0 calc(33.33% - 20px); 
 }
 
 /* Payment Options Styling */
@@ -2156,4 +1828,164 @@ header {
 
 .bank-option span, .ewallet-option span {
   font-weight: 500;
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN / MEDIA QUERIES
+   ======================================================== */
+
+@media (max-width: 992px) {
+  header nav a {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  #cart-items .product-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+/* Add this near the top of your header styles (Desktop view) */
+.hamburger {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #0066cc;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* --- MOBILE HAMBURGER MENU --- */
+@media (max-width: 768px) {
+  .header-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows menu to drop to a new line */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: auto;
+  }
+  
+  .logo-link {
+    order: 1;
+  }
+  
+  .cart-icon {
+    order: 2;
+    margin-left: auto; /* Pushes cart to the right */
+    margin-right: 15px;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+    order: 3;
+  }
+
+  /* Hide Navigation and Auth Links by default */
+  .header-nav, 
+  .auth-links {
+    display: none; 
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    order: 4; /* Pushes them below the header bar */
+  }
+
+  /* The class we will trigger with JavaScript */
+  .header-nav.active, 
+  .auth-links.active {
+    display: flex;
+  }
+
+  /* Styling the dropdown items */
+  .header-nav.active {
+    padding-top: 20px;
+    gap: 15px;
+  }
+
+  .auth-links.active {
+    padding-bottom: 20px;
+    margin-top: 15px;
+    gap: 10px;
+  }
+
+  .header-nav a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  .button {
+    width: 80%; /* Make buttons full width in mobile menu */
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Override the stacked column navigation from previous code */
+  header nav {
+    flex-direction: row !important; 
+    justify-content: center;
+    gap: 12px;
+  }
+
+  header nav a {
+    margin: 0;               /* Remove right margin to rely on flex gap */
+    font-size: 0.9rem;
+  }
+  
+  .button.small {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+  
+  .auth-links {
+    gap: 8px;
+  }
+  
+  .button.small {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .flip-product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-logo {
+    height: 40px;
+  }
+  
+  .header-nav {
+    gap: 10px;
+  }
+  
+  .header-nav a {
+    font-size: 0.9rem;
+  }
+  
+  .button.small {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .checkout-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .product-image {
+    height: 250px;
+  }
 }
