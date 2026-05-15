@@ -225,13 +225,7 @@
       });
     });
 
-    // Update cart count
-    function updateCartCount() {
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
-      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-      const cartCount = document.querySelector('.cart-count');
-      if (cartCount) cartCount.textContent = totalItems;
-    }
+
 
     // FAQ Accordion functionality
     document.querySelectorAll('.faq-question').forEach(button => {

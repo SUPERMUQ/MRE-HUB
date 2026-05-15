@@ -200,12 +200,7 @@ function addToCart(name, price, image, description) {
   }, 1000);
 }
 
-function updateCartCount() {
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-  const cartCount = document.querySelector('.cart-count');
-  if (cartCount) cartCount.textContent = totalItems;
-}
+
 
 // Replace your existing showNotification function with this:
 function showNotification(message, type = 'success') {

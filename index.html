@@ -240,13 +240,7 @@
       });
     });
 
-  // Update cart count from localStorage
-  function updateCartCount() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-    const cartCount = document.querySelector('.cart-count');
-    if (cartCount) cartCount.textContent = totalItems;
-  }
+
 
   // Add to cart event
   document.querySelectorAll('.add-to-cart').forEach(button => {

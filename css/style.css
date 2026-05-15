@@ -28,10 +28,7 @@ a {
 }
 
 /* Header */
-header {
-  background-color: #f2f2f2;
-  border-bottom: 2px solid #00c896;
-}
+
 header h1 {
   color: #fbc80b;
   font-size: 2rem;
@@ -50,21 +47,7 @@ header nav a:hover {
   color: #00c896;
 }
 
-/* Hero Section */
-.hero {
-  background: linear-gradient(145deg, #ffffff, #f9f9f9);
-  padding: 4rem 0;
-  text-align: center;
-  animation: fadeIn 1s ease-in-out;
-}
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
+
 .button {
   display: inline-block;
   padding: 12px 24px;
@@ -412,50 +395,7 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
-.cart-icon {
-  color: #333;
-  font-size: 22px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
 
-.cart-icon:hover {
-  color: #ff6600;
-}
-.cart-icon::after {
-  content: attr(data-count);
-  position: absolute;
-  top: -8px;
-  right: -10px;
-  background: red;
-  color: white;
-  font-size: 10px;
-  padding: 2px 5px;
-  border-radius: 50%;
-  display: none; /* can be toggled with JS */
-}
-.cart-icon {
-  position: relative;
-  color: #333;
-  font-size: 22px;
-  text-decoration: none;
-}
-
-.cart-icon:hover {
-  color: #ff6600;
-}
-
-.cart-count {
-  position: absolute;
-  top: -8px;
-  right: -10px;
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 2px 6px;
-  border-radius: 50%;
-}
 form input, form button {
   font-family: 'Poppins', sans-serif;
   padding: 12px 15px;
@@ -481,53 +421,8 @@ form button {
 form button:hover {
   background-color: #005fa3;
 }
-/* Styling untuk borang checkout */
-.checkout-form input,
-.checkout-form textarea {
-  padding: 12px 15px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  transition: 0.3s;
-  background-color: #f9f9f9;
-  font-family: inherit;
-}
 
-.checkout-form input:focus,
-.checkout-form textarea:focus {
-  border-color: #007bff;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-  font-family: inherit;
-}
 
-.checkout-form textarea {
-  resize: vertical;
-  font-family: inherit;
-}
-
-.checkout-form {
-  background-color: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  max-width: 500px;
-  margin: 40px auto 20px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.customer-photo {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 /* ✅ Top Pop-up notification styling */
 /* Updated Popup Notification - Positioned relative to header */
@@ -614,15 +509,7 @@ form button:hover {
     overflow: hidden;
 }
 
-.contact-hero:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
-}
+
 
 .contact-hero .container {
     position: relative;
@@ -716,39 +603,7 @@ form button:hover {
     color: var(--primary-dark);
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-}
-
-.form-group textarea {
-    min-height: 150px;
-    resize: vertical;
-}
 
 .map-container {
     height: 400px;
@@ -1209,40 +1064,13 @@ form button:hover {
   }
 }
 
-/* Checkout Grid Layout */
-.checkout-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
 
-.order-summary {
-  background: #f9f9f9;
-  padding: 1.5rem;
-  border-radius: 10px;
-}
 
-.checkout-items {
-  max-height: 400px;
-  overflow-y: auto;
-  margin: 1rem 0;
-}
 
-.checkout-item {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid #eee;
-}
 
-.checkout-item img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-right: 1rem;
-}
+
+
+
 
 .checkout-total {
   font-weight: bold;
@@ -1252,9 +1080,7 @@ form button:hover {
   border-top: 2px solid #00c896;
 }
 
-@media (max-width: 768px) {
-  .checkout-grid { grid-template-columns: 1fr; }
-}
+
 
 
 /* Checkout Page Styles */
@@ -1419,60 +1245,12 @@ form button:hover {
   display: block;
 }
 
-/* Bank Options */
-.bank-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.bank-option {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.bank-option:hover {
-  border-color: #0066cc;
-}
-
-.bank-option input {
-  margin-right: 10px;
-}
 
 .bank-option img {
   height: 30px;
   object-fit: contain;
 }
 
-/* E-Wallet Options */
-.ewallet-options {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.ewallet-option {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.ewallet-option:hover {
-  border-color: #0066cc;
-}
-
-.ewallet-option input {
-  margin-right: 10px;
-}
 
 .ewallet-option img {
   height: 30px;
@@ -1521,20 +1299,7 @@ form button:hover {
   color: #00c896;
 }
 
-.checkout-items {
-  max-height: 300px;
-  overflow-y: auto;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 1.5rem;
-}
 
-.checkout-item {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
-  gap: 15px;
-}
 
 .checkout-item:not(:last-child) {
   border-bottom: 1px solid #f5f5f5;
@@ -1616,17 +1381,7 @@ form button:hover {
 }
 
 
-/* Make header sticky */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  background-color: #f2f2f2;
-  border-bottom: 2px solid #00c896;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
-  transition: all 0.3s ease;
-}
+
 /* Expiration date styling */
 .product-meta .expires,
 .product-card .expires {
@@ -1658,41 +1413,9 @@ header {
 
 
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .logo-container img {
-    height: 50px;
-  }
-  .logo-container h1 {
-    font-size: 1.5rem;
-  }
-}
 
-@media (max-width: 768px) {
-  .logo-container img {
-    height: 40px;
-  }
-  .logo-container h1 {
-    font-size: 1.3rem;
-  }
-}
 
-@media (max-width: 576px) {
-  .logo-container {
-    gap: 10px;
-  }
-  .logo-container img {
-    height: 36px;
-  }
-  .logo-container h1 {
-    font-size: 1.1rem;
-  }
-}
 
-/* Logo Container */
-.logo-container img {
-  filter: sepia(0.3) brightness(1.1);  /* Gives logo earthy tone */
-}
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
@@ -1730,22 +1453,14 @@ header {
     font-size: 0.8rem;
   }
 }
-/* Logo styling */
-.header-logo {
-  height: 60px; /* Matches your current logo height */
-  width: auto;
-  transition: all 0.3s ease;
-}
+
 
 .header-logo:hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
 
-/* Remove any existing logo container styles */
-.logo-container {
-  display: none;
-}
+
 @media (max-width: 768px) {
   .header-logo {
     height: 50px; /* Slightly smaller on mobile */
@@ -2000,12 +1715,7 @@ header {
   transition: all 0.3s ease;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-}
+
 
 /* Logo Styles */
 .logo-link {
@@ -2013,17 +1723,9 @@ header {
   align-items: center;
 }
 
-.header-logo {
-  height: 300px;
-  width: auto;
-  transition: all 0.3s ease;
-}
 
-/* Navigation Styles */
-.header-nav {
-  display: flex;
-  gap: 20px;
-}
+
+
 
 .header-nav a {
   position: relative;
@@ -2362,12 +2064,7 @@ header {
 }
 
 /* Cart Page Specific Styles */
-#cart-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
+
 
 #cart-items .product-card {
   width: 100%;
