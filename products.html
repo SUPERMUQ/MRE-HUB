@@ -93,57 +93,7 @@
 
 
 
-    // Show popup notification
-    function showNotification(message) {
-      const popup = document.getElementById('popup-notification');
-      const popupText = document.getElementById('popup-message');
 
-      popupText.textContent = message;
-      popup.classList.add('show');
-
-      setTimeout(() => {
-        popup.classList.remove('show');
-      }, 3000);
-    }
-
-    // Add to cart function
-    function addToCart(name, price, image, description, event) {
-      event.stopPropagation(); // Prevent flipping when clicking add to cart
-      
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-      
-      const existingProduct = cart.find(item => item.name === name);
-      if (existingProduct) {
-        existingProduct.quantity += 1;
-      } else {
-        cart.push({
-          name: name,
-          image: image,
-          description: description,
-          price: price,
-          quantity: 1
-        });
-      }
-
-      localStorage.setItem('cart', JSON.stringify(cart));
-      updateCartCount();
-      showNotification(`${name} added to cart!`);
-      
-      // Add animation to cart icon
-      const cartIcon = document.querySelector('.cart-icon');
-      cartIcon.classList.add('animate');
-      setTimeout(() => {
-        cartIcon.classList.remove('animate');
-      }, 1000);
-    }
-
-    // Initialize
-    updateCartCount();
-    
-    
-    
-
-    
   </script>
 
   <script src="js/products.js"></script><script src="js/auth.js"></script>

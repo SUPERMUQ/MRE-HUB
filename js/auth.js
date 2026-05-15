@@ -327,12 +327,12 @@ document.addEventListener('DOMContentLoaded', function() {
 function injectAuthCSS() {
   const style = document.createElement('style');
   style.textContent = `
-    /* User dropdown styles */
+    /* User dropdown styles - unique to auth.js, not in style.css */
     .user-dropdown {
       position: relative;
       display: inline-block;
     }
-    
+
     .user-menu {
       background: none;
       border: none;
@@ -347,11 +347,11 @@ function injectAuthCSS() {
       border-radius: 4px;
       transition: all 0.3s ease;
     }
-    
+
     .user-menu:hover {
       background: rgba(0,0,0,0.05);
     }
-    
+
     .dropdown-content {
       display: none;
       position: absolute;
@@ -363,7 +363,7 @@ function injectAuthCSS() {
       border-radius: 6px;
       overflow: hidden;
     }
-    
+
     .dropdown-content a {
       color: #333;
       padding: 12px 16px;
@@ -371,191 +371,43 @@ function injectAuthCSS() {
       display: block;
       transition: background 0.3s;
     }
-    
+
     .dropdown-content a:hover {
       background-color: #f5f5f5;
       color: #0066cc;
     }
-    
+
     .user-dropdown:hover .dropdown-content {
       display: block;
     }
-    
-    /* Account page styles */
-    .form-box {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 2rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
+
+    /* Not signed in state */
     .not-signed-in {
       text-align: center;
       padding: 2rem;
     }
-    
+
     .not-signed-in p {
       margin-bottom: 1.5rem;
       font-size: 1.1rem;
       color: #555;
     }
-    
+
     .auth-actions {
       display: flex;
       gap: 1rem;
       justify-content: center;
     }
-    
+
+    /* Account details section */
     .account-details {
       padding: 1rem;
     }
-    
+
     .account-details h3 {
       margin-bottom: 1.5rem;
       color: #333;
       text-align: center;
-    }
-    
-    .info-item {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #eee;
-    }
-    
-    .info-item label {
-      font-weight: 600;
-      color: #555;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    
-    .info-item p {
-      background: #f9f9f9;
-      padding: 10px;
-      border-radius: 6px;
-      margin: 0;
-    }
-    
-    /* Order history styles */
-    .order-item {
-      background: white;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .order-item h4 {
-      margin-top: 0;
-      color: #0066cc;
-    }
-    
-    .order-meta {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-      color: #666;
-      flex-wrap: wrap;
-    }
-    
-    .order-meta span {
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-    
-    .order-items {
-      margin-top: 0.5rem;
-      padding: 0.5rem;
-      background: #f9f9f9;
-      border-radius: 4px;
-    }
-    
-    .order-items ul {
-      margin: 0.3rem 0 0 1rem;
-      padding: 0;
-    }
-    
-    .order-items li {
-      margin-bottom: 0.2rem;
-    }
-    
-    .no-orders {
-      text-align: center;
-      padding: 1rem;
-      color: #666;
-    }
-    
-    .no-orders a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    
-    .no-orders a:hover {
-      text-decoration: underline;
-    }
-    
-    /* Button styles */
-    .button {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: #0066cc;
-      color: white;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    
-    .button:hover {
-      background: #0055aa;
-    }
-    
-    .button.outline {
-      background: transparent;
-      border: 1px solid #0066cc;
-      color: #0066cc;
-    }
-    
-    .button.outline:hover {
-      background: rgba(0,102,204,0.1);
-    }
-    
-    .button.small {
-      padding: 0.4rem 0.8rem;
-      font-size: 0.85rem;
-    }
-    
-    /* Cart icon styles */
-    .cart-icon {
-      position: relative;
-      color: #333;
-      text-decoration: none;
-    }
-    
-    .cart-count {
-      position: absolute;
-      top: -8px;
-      right: -8px;
-      background: #0066cc;
-      color: white;
-      border-radius: 50%;
-      width: 18px;
-      height: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7rem;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-      .order-meta {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
     }
   `;
   document.head.appendChild(style);

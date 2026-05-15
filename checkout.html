@@ -550,19 +550,7 @@
       }
     }
 
-    // Process order function (simulated)
-    function processOrder(orderData) {
-      // In a real application, this would send the order to a server
-      // For now, we'll simulate a successful order
-      console.log('Order processed:', orderData);
-      
-      // Save order to localStorage for order history
-      const orders = JSON.parse(localStorage.getItem('orders')) || [];
-      orders.push(orderData);
-      localStorage.setItem('orders', JSON.stringify(orders));
-      
-      return true; // Return true for success
-    }
+
 
 
 

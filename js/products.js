@@ -141,9 +141,7 @@ document.addEventListener('click', function(e) {
     const price = parseFloat(button.getAttribute('data-price'));
     const image = button.getAttribute('data-image');
     const description = button.getAttribute('data-description');
-    const id = parseInt(button.getAttribute('data-id')); // Add this line
-    
-    addToCart(name, price, image, description, id); // Update this line
+    addToCart(name, price, image, description);
   }
 });
 });
@@ -191,4 +189,3 @@ function showNotification(message) {
     popup.classList.remove('show');
   }, 3000);
 }
-
