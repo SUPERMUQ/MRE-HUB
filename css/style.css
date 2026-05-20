@@ -1861,26 +1861,25 @@ header {
 @media (max-width: 768px) {
   .header-container {
     display: flex;
-    flex-wrap: wrap; /* Allows menu to drop to a new line */
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     height: auto;
   }
+
+  .header-logo {
+    height: 100px;
+  }
   
   .logo-link {
     order: 1;
   }
-  
-  .cart-icon {
-    order: 2;
-    margin-left: auto; /* Pushes cart to the right */
-    margin-right: 15px;
-  }
 
   .hamburger {
-    display: block; /* Show hamburger on mobile */
-    order: 3;
+    display: block;
+    order: 2;
+    margin-left: auto;
   }
 
   /* Hide Navigation and Auth Links by default */
@@ -1890,53 +1889,58 @@ header {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    order: 4; /* Pushes them below the header bar */
+    order: 5;
+    /* Reset desktop absolute positioning */
+    position: static;
+    transform: none;
+    left: auto;
   }
 
-  /* The class we will trigger with JavaScript */
+  /* Show when toggled via JavaScript */
   .header-nav.active, 
   .auth-links.active {
     display: flex;
   }
 
-  /* Styling the dropdown items */
   .header-nav.active {
-    padding-top: 20px;
-    gap: 15px;
+    padding-top: 15px;
+    gap: 0;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
   }
 
   .auth-links.active {
-    padding-bottom: 20px;
-    margin-top: 15px;
+    padding-bottom: 15px;
     gap: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
   }
 
   .header-nav a {
     width: 100%;
     text-align: center;
-    padding: 10px 0;
+    padding: 12px 0;
     margin: 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
   }
 
-  .button {
-    width: 80%; /* Make buttons full width in mobile menu */
+  .header-nav a:last-child {
+    border-bottom: none;
+  }
+
+  .auth-links .button {
+    width: 80%;
     text-align: center;
+    margin-top: 0;
+  }
+
+  .auth-links .cart-icon {
+    margin: 5px auto 0;
   }
 }
 
 @media (max-width: 600px) {
-  /* Override the stacked column navigation from previous code */
-  header nav {
-    flex-direction: row !important; 
-    justify-content: center;
-    gap: 12px;
-  }
-
-  header nav a {
-    margin: 0;               /* Remove right margin to rely on flex gap */
-    font-size: 0.9rem;
-  }
-  
   .button.small {
     padding: 6px 10px;
     font-size: 0.8rem;
@@ -1964,20 +1968,7 @@ header {
   }
 
   .header-logo {
-    height: 40px;
-  }
-  
-  .header-nav {
-    gap: 10px;
-  }
-  
-  .header-nav a {
-    font-size: 0.9rem;
-  }
-  
-  .button.small {
-    padding: 6px 12px;
-    font-size: 0.8rem;
+    height: 80px;
   }
   
   .checkout-item {

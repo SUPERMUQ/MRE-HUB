@@ -318,6 +318,15 @@ document.addEventListener('DOMContentLoaded', function() {
   setupAccountPage();
   protectCheckout();
   updateCartCount();
+
+  // Hamburger menu toggle (mobile nav)
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', () => {
+      document.querySelector('.header-nav')?.classList.toggle('active');
+      document.querySelector('.auth-links')?.classList.toggle('active');
+    });
+  }
 });
 
 // ========================
