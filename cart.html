@@ -84,7 +84,7 @@
   <main>
     <section class="container cart-container">
       <h2 style="text-align: center;">Your Shopping Cart</h2>
-      <div id="cart-items" class="product-grid"></div>
+      <div id="cart-items" style="display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 800px; margin: 0 auto;"></div>
       <div id="cart-total" style="text-align:center; margin-top:20px;"></div>
       <div id="checkout-btn" style="text-align:center; margin-top:20px;"></div>
     </section>
@@ -160,19 +160,30 @@
       totalPrice += item.price * item.quantity;
 
       cartContainer.innerHTML += `
-        <div class="product-card" style="max-width: 320px; margin: 0 auto;">
-          <a href="product-detail.html?id=${item.id}" class="product-image-link">
-            <img src="${item.image}" alt="${item.name}" style="height: 200px; object-fit: cover;">
+        <div style="display: flex; gap: 15px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); width: 100%;">
+          
+          <a href="product-detail.html?id=${item.id}" style="flex-shrink: 0;">
+            <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 100px; object-fit: cover; border-radius: 6px;">
           </a>
-          <a href="product-detail.html?id=${item.id}" class="product-name-link">
-            <h2 style="font-size: 1.rem; margin: 10px 0;">${item.name}</h2>
-          </a>
-          <p style="margin: 5px 0; color: #000000; font-size: 1rem;"><strong>Quantity:</strong> ${item.quantity}</p>
-          <p style="margin: 5px 0; color: #000000; font-size: 1rem;"><strong>Price:</strong> RM ${(item.price * item.quantity).toFixed(2)}</p>
-          <div style="display:flex; gap:10px; justify-content:center; margin-top: 15px;">
-            <button onclick="decreaseQuantity(${index})" class="button small">-</button>
-            <button onclick="increaseQuantity(${index})" class="button small">+</button>
-            <button onclick="removeItem(${index})" class="button small outline">Remove All</button>
+          
+          <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <a href="product-detail.html?id=${item.id}" class="product-name-link" style="display: block; margin-bottom: 5px;">
+                <h2 style="font-size: 1.1rem; margin: 0; color: #0066cc;">${item.name}</h2>
+              </a>
+              <p style="margin: 0; color: #555; font-size: 0.95rem;">RM ${(item.price * item.quantity).toFixed(2)}</p>
+            </div>
+            
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px; flex-wrap: wrap; gap: 10px;">
+              <div style="display: flex; align-items: center; border: 1px solid #ddd; border-radius: 4px; overflow: hidden;">
+                <button onclick="decreaseQuantity(${index})" style="background: #f9f9f9; border: none; border-right: 1px solid #ddd; padding: 5px 12px; font-weight: bold; cursor: pointer;">-</button>
+                <span style="padding: 5px 12px; font-weight: bold; font-size: 0.95rem; background: #fff;">${item.quantity}</span>
+                <button onclick="increaseQuantity(${index})" style="background: #f9f9f9; border: none; border-left: 1px solid #ddd; padding: 5px 12px; font-weight: bold; cursor: pointer;">+</button>
+              </div>
+              <button onclick="removeItem(${index})" style="background: none; border: none; color: #ff4757; cursor: pointer; display: flex; align-items: center; gap: 5px; font-size: 0.9rem;">
+                <i class="fas fa-trash"></i> Remove
+              </button>
+            </div>
           </div>
         </div>
       `;
